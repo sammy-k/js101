@@ -1,29 +1,20 @@
 // Mortgage / Car Loan Calculator
+const readlineSync = require('readline-sync');
 
-const READLINE = require('readline-sync');
-
-// Need 3 pieces of data: 1) loan amount; 2) APR; 3) loan duration
-
-console.log("What is your loan amount?");
-let loanAmount = Number(READLINE.question());
-if (loanAmount === NaN) {
-  console.log('Please enter a valid number');
-}
-//console.log(typeof loanAmount);
+// Need 3 pieces of data: 1) loan amount; 2) APR; 3) loan duration (years)
+console.log();
+let loanAmount = readlineSync.question("What is your loan amount?\n");
 console.log(loanAmount);
 
-// console.log("What is your Annual Percentage Rate (APR)?");
-// let annualPercentageYield = READLINE.question();
-// console.log(`Your APR is ${annualPercentageYield}`);
+let apr = readlineSync.question("What is your Annual Percentage Rate (APR)?\n") / 100;
+console.log(apr);
 
-// console.log("What is the duration of your loan in months?");
-// let loanDuration = Number(READLINE.question());
-// // If not a number or blank, prompt again for a number
-// if (loanDuration === '') {
-//   console.log('Please enter a valid number');
-// }
-// console.log(`Your loan duration is ${loanDuration} months`);
-// // Calculate the following: 1) monthly interest rate; 2) loan duration in months
+let loanDurationYears = readlineSync.question("What is the duration of your loan in years?\n");
+console.log(loanDurationYears);
+
+// Calculate the following: 1) monthly interest rate; 2) loan duration in months
+let monthlyInterestRate = apr / 12;
+let loanDurationMonths = loanDurationYears * 12;
 
 // Monthly payment calculation: let m = p * (j / (1 - Math.pow((1 + j), (-n))));
 // m = monthly payment
@@ -31,4 +22,9 @@ console.log(loanAmount);
 // j = monthly interest rate
 // n = loan duration in months
 
+let monthlyPayment = loanAmount * (monthlyInterestRate / (1 - Math.pow((1 + monthlyInterestRate), (-loanDurationMonths))));
+monthlyPayment = parseFloat(monthlyPayment.toFixed(2));
+console.log(monthlyPayment);
+
 // Return payment amount in dollar format ($xxx.xx)
+console.log(`Your monthly payment is $${monthlyPayment}.`);
