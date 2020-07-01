@@ -1,0 +1,32 @@
+{
+  "en": {
+    "welcome": "Welcome to Calculator!",
+    "number1": "What's the first number?",
+    "number2": "What's the second number?",
+    "invalidNumber": "Hmm... that doesn't look like a valid number.",
+    "operation": "What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide",
+    "invalidOperation": "Must choose 1, 2, 3 or 4",
+    "keepUsing": "Would you like to keep using the calculator? (y/n)",
+    "invalidResponse": "Please enter 'y' or 'n'."
+  },
+  "es": {
+    "welcome": "Bienvenido a la calculadora!",
+    "number1": "¿Cuál es el primer número?",
+    "number2": "¿Cuál es el segundo número?",
+    "invalidNumber": "Hmm ... eso no parece un número válido.",
+    "operation": "¿Qué operación te gustaría realizar?\n1) Sumar 2) Restar 3) Multiplicar 4) Dividir",
+    "invalidOperation": "Debe elegir 1, 2, 3 or 4",
+    "keepUsing": "¿Te gustaría seguir usando la calculadora? (si (y) o no (n))",
+    "invalidResponse": "Por favor escribe 'y' or 'n'."
+  },
+  "fr": {
+    "welcome": "Bienvenue dans Calculatrice!",
+    "number1": "Quel est le premier numéro?",
+    "number2": "Quel est le deuxième numéro?",
+    "invalidNumber": "Hmm ... qui ne ressemble pas à un nombre valide.",
+    "operation": "Quelle opération souhaitez-vous effectuer?\n1) Ajouter 2) Soustraire 3) Multiplier 4) Diviser",
+    "invalidOperation": "Doit choisir 1, 2, 3 ou 4",
+    "keepUsing": "Souhaitez-vous continuer à utiliser la calculatrice? (oui (y) ou non (n))",
+    "invalidResponse": "Entrez s'il vous plait 'y' or 'n'."
+  }
+}

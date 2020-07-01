@@ -1,43 +1,41 @@
-const READLINE = require('readline-sync');
+// constant and variable declaration and initialization
+const LANGUAGE = 'en';
+const readLineSync = require('readline-sync');
+const MESSAGES = require('./calculator_messages.json');
 
-function prompt(message) {
+function messages(message, lang = 'en') {
+  return MESSAGES[lang][message];
+}
+function prompt(key) {
+  let message = messages(key, LANGUAGE);
   console.log(`=> ${message}`);
 }
 function invalidNumber(number) {
   return number.trimStart() === '' || Number.isNaN(Number(number));
 }
 
-prompt('Welcome to Calculator!');
+// initial user input
+prompt('welcome');
 
 while (true) {
-
   // Ask the user for the first number
-  prompt("What's the first number?");
-  let number1 = READLINE.question();
-
+  let number1 = readLineSync.question(prompt('number1'));
   while (invalidNumber(number1)) {
-    prompt("Hmm... that doesn't look like a valid number.");
-    number1 = READLINE.question();
+    number1 = readLineSync.question(prompt('invalidNumber'));
   }
-  console.log(number1);
 
   // Ask the user for the second number
-  prompt("What's the second number?");
-  let number2 = READLINE.question();
-
+  let number2 = readLineSync.question(prompt('number2'));
   while (invalidNumber(number2)) {
-    prompt("Hmm... that doesn't look like a valid number.");
-    number2 = READLINE.question();
+    number2 = readLineSync.question(prompt('invalidNumber'));
   }
+
   console.log(`${number1} ${number2}`);
 
   // Ask the user for an operation to perform
-  prompt('What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide');
-  let operation = READLINE.question();
-
+  let operation = readLineSync.question(prompt('operation'));
   while (!['1', '2', '3', '4'].includes(operation)) {
-    prompt('Must choose 1, 2, 3 or 4');
-    operation = READLINE.question();
+    operation = readLineSync.question(prompt('invalidOperation'));
   }
 
   // Perform the operation on the two numbers
@@ -60,8 +58,12 @@ while (true) {
   // Print the result to the terminal
   console.log(`The result is ${output}`);
 
-  prompt('Would you like to perform another operation? (y/n)');
-  let answer = READLINE.question();
+  // Prompt the user for another calculation
+  let answer = readLineSync.question(prompt('keepUsing')).toLowerCase();
+
+  while (answer[0] !== 'n' && answer[0] !== 'y') {
+    answer = readLineSync.question(prompt('invalidResponse')).toLowerCase();
+  }
 
   if (answer !== 'y') break;
 }
