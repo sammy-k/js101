@@ -8,10 +8,10 @@
 //   The Flintstones Rock!
 
 function asciiArt() {
-  let idx = 0;
-  while (idx < 10) {
-    console.log(`The Flintstones Rock!\n The Flintstones Rock!\n  The Flintstones Rock!`);
-    idx += 1;
+  let indent = '';
+  for (let idx = 0; idx < 10; idx += 1) {
+    console.log(indent + 'The Flintstones Rock!');
+    indent += ' ';
   }
 }
 
