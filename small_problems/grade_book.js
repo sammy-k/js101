@@ -1,3 +1,4 @@
+// COMPLETED - NO FURTHER REVIEW
 // Grade Book
 // Write a function that determines the mean (average) of the three scores passed to it, and returns the letter associated with that grade.
 
@@ -11,20 +12,18 @@
 // Tested values are all between 0 and 100. There is no need to check for negative values or values greater than 100.
 
 function getGrade(num1, num2, num3) {
-  let grade = '';
   let gradeMean = (num1 + num2 + num3) / 3;
-  if (90 <= gradeMean <= 100) {
-    grade = 'A';
-  } else if (80 <= gradeMean < 90) {
-    grade = 'B';
-  } else if (70 <= gradeMean < 80) {
-    grade ='C';
-  } else if (60 <= gradeMean < 70) {
-    grade = 'D';
+  if ((90 <= gradeMean) && (gradeMean <= 100)) {
+    return 'A';
+  } else if ((80 <= gradeMean) && (gradeMean < 90)) {
+    return 'B';
+  } else if ((70 <= gradeMean) && (gradeMean < 80)) {
+    return 'C';
+  } else if ((60 <= gradeMean) && (gradeMean < 70)) {
+    return 'D';
   } else {
-    grade = 'F';
+    return 'F';
   }
-  return grade;
 }
 
 

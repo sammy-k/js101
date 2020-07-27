@@ -7,32 +7,17 @@
 // - object keys are word sizes, values are number of words that size
 // - per test cases, punctuation is included in word size
 
-function keyArray (wordSize) {
-  let keys = [];
-  for (let key = 0; key <= wordSize; key += 1) {
-    keys.push(key);
-  }
-  return keys;
-}
-
 function wordSizes(str) {
-  const wordObj = {};
-  const wordArray = str.split(' ');
-  let wordSize = 0;
+  let wordArray = str.split(' ');
+  let wordObj = {};
   for (let idx = 0; idx < wordArray.length; idx += 1) {
-    let currentWordElement = wordArray[idx];
-    if (currentWordElement.length > wordSize) {
-      wordSize = currentWordElement.length;
-    }
+    let currentWord = wordArray[idx];
+    wordObj[idx] = currentWord.length;
   }
-  console.log(keyArray(wordSize));
-  console.log(wordSize);
-  console.log(wordArray);
-  //return wordObj;
+  console.log(wordObj);
 }
 
-
-console.log(wordSizes('Four score and seven.'));                       // { "3": 1, "4": 1, "5": 1, "6": 1 }
+wordSizes('Four score and seven.');                       // { "3": 1, "4": 1, "5": 1, "6": 1 }
 // wordSizes('Hey diddle diddle, the cat and the fiddle!');  // { "3": 5, "6": 1, "7": 2 }
 // wordSizes("What's up doc?");                              // { "2": 1, "4": 1, "6": 1 }
 // wordSizes('');                                            // {}

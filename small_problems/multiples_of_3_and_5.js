@@ -1,3 +1,5 @@
+// COMPLETED - NO FURTHER REVIEW REQUIRED
+
 function multisum(num) {
   let sumTotal = 0;
   for (let i = 1; i <= num; i++) {

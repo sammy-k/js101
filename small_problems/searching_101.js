@@ -1,3 +1,5 @@
+// COMPLETE - NO FURTHER REVIEW
+
 const READLINE = require('readline-sync');
 
 let numArray = [];

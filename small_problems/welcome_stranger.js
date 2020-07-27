@@ -1,3 +1,5 @@
+// COMPLETED - NO FURTHER REVIEW NECESSARY
+
 let arr = ["John", "Q", "Doe"];
 let obj = {
   title: "Master",

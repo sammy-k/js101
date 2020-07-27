@@ -1,3 +1,5 @@
+// COMPLETED - NO FURTHER REVIEW REQUIRED
+
 const readLineSync = require('readline-sync');
 
 let name = readLineSync.question('What is your name?\n');

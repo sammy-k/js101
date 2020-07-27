@@ -1,3 +1,5 @@
+// COMPLETED - NO FURTHER REVIEW NEEDED
+
 // OPTION 1
 // function logOdds() {
 //   for (let i = 1; i <= 99; i++) {

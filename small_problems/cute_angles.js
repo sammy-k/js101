@@ -1,12 +1,13 @@
+// Cute Angles
+// Write a function that takes a floating point number representing an angle between 0 and 360 degrees, and returns a string representing that angle in degrees, minutes, and seconds. You should use a degree symbol (˚) to represent degrees, a single quote (') to represent minutes, and a double quote (") to represent seconds. There are 60 minutes in a degree, and 60 seconds in a minute.
+
 function dms(num) {
   let degree = Math.floor(num);
-  let minutesSeconds = (num - degree) * 60;
-  let minutes = Math.floor(minutesSeconds);
-  if (minutesSeconds === 0) {
-    return `${degree}°00'00"`;
-  } else {
-    return `${degree}°${minutes}'`;
+  let minutes = num.toString();
+  for (let idx = 0; idx < minutes.length; idx += 1) {
+    
   }
+  return (`${degree}˚`);
 }
 
 console.log(dms(30));           // 30°00'00";

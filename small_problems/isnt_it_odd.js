@@ -1,3 +1,5 @@
+// COMPLETED - NO FURTHER REVIEW NEEDED
+
 function isOdd(num) {
   //this returns true or false based on passed in number
   //(method) Math.abs(x: number): number

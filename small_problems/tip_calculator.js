@@ -1,3 +1,5 @@
+// COMPLETED - NO FURTHER REVIEW NEEDED
+
 const READLINE = require('readline-sync');
 
 // prompt for a bill amount

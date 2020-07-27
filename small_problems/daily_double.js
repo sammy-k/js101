@@ -1,8 +1,10 @@
+// COMPLETED - NO FURTHER REVIEW
+
 function crunch(string) {
   let newString = '';
   for (let idx = 0; idx < string.length; idx++) {
     if (string[idx] === string[idx - 1]) {
-      string.slice(string[idx]);
+      continue;
     } else {
       newString += string[idx];
     }

@@ -1,3 +1,5 @@
+// COMPLETED - NO FURTHER REVIEW NEEDED
+
 const logEvens = () => {
   let num = 1;
   while (num <= 99) {

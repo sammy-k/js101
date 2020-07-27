@@ -1,3 +1,5 @@
+// COMPLETED - NO FURTHER REVIEW
+
 const readLineSync = require('readline-sync');
 
 let firstNumber = Number(readLineSync.question(`==> Enter the first number:\n`));

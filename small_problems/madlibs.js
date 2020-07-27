@@ -1,3 +1,5 @@
+// COMPLETED - NO FURTHER REVIEW
+
 // Madlibs
 // Madlibs is a simple game where you create a story template with "blanks" for words. You, or another player, then construct a list of words and place them into the story, creating an often silly or funny story as a result.
 

@@ -3,6 +3,17 @@
 
 // Write a function that returns the number provided as an argument multiplied by two, unless the argument is a double number; return double numbers as-is.
 
+// input: number
+// output: number
+
+function twice(num) {
+  let nArray = num.toString().split('');
+  if (nArray.length % 2 === 1) {
+    nArray = Number(nArray.join('') * 2);
+    console.log(nArray);
+  }
+}
+
 
 twice(37);          // 74
 twice(44);          // 44

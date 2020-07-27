@@ -1,3 +1,4 @@
+// COMPLETE - NO FURTHER REVIEW
 // function oddities(arr) {
 //   let oddArray = [];
 //   for (let idx = 0; idx < arr.length; idx++) {

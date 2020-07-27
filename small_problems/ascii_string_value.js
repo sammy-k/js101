@@ -1,3 +1,5 @@
+// COMPLETED - NO FURTHER REVIEW REQUIRED
+
 function asciiValue(string) {
   let totalValue = 0;
   for (let i = 0; i < string.length; i++) {
