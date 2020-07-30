@@ -7,14 +7,10 @@
 
 // You may assume that the argument is always an integer greater than or equal to 2.
 
-// input: number
-// outut: number representing index of first Fibonacci that has number of digits specified by passed in argument
-
-
-
 function findFibonacciIndexByLength(num) {
-
+  for (let number = 2; number <= num)
 }
+
 
 findFibonacciIndexByLength(2);       // 7
 findFibonacciIndexByLength(10);      // 45
