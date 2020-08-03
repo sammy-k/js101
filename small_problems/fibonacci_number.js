@@ -7,8 +7,19 @@
 
 // You may assume that the argument is always an integer greater than or equal to 2.
 
-function findFibonacciIndexByLength(num) {
-  for (let number = 2; number <= num)
+// function findFibonacciIndexByLength(num) {
+//   for (let number = 2; number <= num)
+// }
+
+function fibbonaccis(num) {
+  let fArray = [];
+  let currentNum = 1;
+  while (counter <= num) {
+    fArray.push(currentNum)
+  }
+
+
+  }
 }
 
 

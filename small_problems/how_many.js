@@ -1,16 +1,19 @@
 // How Many?
 // Write a function that counts the number of occurrences of each element in a given array. Once counted, log each element alongside the number of occurrences. Consider the words case sensitive e.g. ("suv" !== "SUV").
 
-let vehicles = ['car', 'car', 'truck', 'car', 'SUV', 'truck',
-                'motorcycle', 'motorcycle', 'car', 'truck'];
+let vehicles = ['car', 'car', 'truck', 'car', 'SUV', 'truck', 'motorcycle', 'motorcycle', 'car', 'truck'];
 
-function countOccurrences(arr) {
-  let cars = arr.filter(word => word === 'car');
-  console.log(cars);
+function itemCount(arr) {
+  for (let idx = 0; idx < arr.length; idx += 1) {
+    let currentElem = arr[idx];
+    console.log(currentElem);
+    let total = arr.filter((element, currentElem) => element === currentElem);
+    console.log(total);
+  }
+  //console.log(`${currentElem} => ${total}`);
 }
 
-
-countOccurrences(vehicles);
+console.log(itemCount(vehicles));
 
 // // console output -- your output sequence may be different
 // car => 4
