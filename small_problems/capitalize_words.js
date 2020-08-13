@@ -4,15 +4,12 @@
 // You may assume that a word is any sequence of non-whitespace characters.
 
 function wordCap(str) {
-  let words = str.split(' ');
-  let capsArray = [];
-  for (let idx = 0; idx < words.length; idx += 1) {
-    let currentWord = words[idx];
-    capsArray.push(currentWord.slice(0, 1).toUpperCase() + currentWord.slice(1).toLowerCase());
-  }
-  return capsArray.join(' ');
+  let result = [];
+  str.split(' ').forEach((word) => {
+    result.push(word[0].toUpperCase() + word.slice(1).toLowerCase());
+  });
+  return result.join(' ');
 }
-
 
 console.log(wordCap('four score and seven'));       // "Four Score And Seven"
 console.log(wordCap('the javaScript language'));    // "The Javascript Language"

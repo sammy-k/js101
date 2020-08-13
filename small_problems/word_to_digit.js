@@ -14,17 +14,17 @@ let alphaNums = {
   nine: 9
 };
 
+let keys = Object.keys(alphaNums);
+
 function wordToDigit(str) {
   let result = [];
-  let words = str.split(' ');
-  for (let idx = 0; idx < words.length; idx += 1) {
-    let currentWord = words[idx];
-    if (Object.keys(alphaNums).includes(currentWord)) {
-      result.push(alphaNums[currentWord]);
+  str.split(' ').forEach((word) => {
+    if (keys.includes(word)) {
+      result.push(alphaNums[word]);
     } else {
-      result.push(currentWord);
+      result.push(word);
     }
-  }
+  });
   return result.join(' ');
 }
 

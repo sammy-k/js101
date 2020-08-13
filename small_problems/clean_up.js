@@ -6,13 +6,13 @@
 // output: string 
 
 function cleanUp(str) {
-  let regex = /[a-z]/;
+  let regex = /[a-z]/g;
   let cleanString = '';
-  for (let idx = 0; idx < str.length; idx += 1) {
-    if (regex.includes(str[idx])) {
-      cleanString += str[idx];
+  str.split('').forEach((letter) => {
+    if (regex.includes(letter)) {
+      cleanString += letter;
     }
-  }
+  });
   return cleanString;
 }
 

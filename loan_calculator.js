@@ -1,9 +1,9 @@
 // Mortgage / Car Loan Calculator
-const readlineSync = require('readline-sync');
+const readline = require('readline-sync');
 
 // Need 3 pieces of data: 1) loan amount; 2) APR; 3) loan duration (years)
 console.log();
-let loanAmount = readlineSync.question("What is your loan amount?\n").trim();
+let loanAmount = readline.question("What is your loan amount?\n").trim();
 console.log(loanAmount);
 
 let apr = readlineSync.question("What is your Annual Percentage Rate (APR)?\n") / 100;

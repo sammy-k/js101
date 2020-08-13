@@ -7,24 +7,22 @@
 
 // You may assume that the argument is always an integer greater than or equal to 2.
 
-// function findFibonacciIndexByLength(num) {
-//   for (let number = 2; number <= num)
-// }
-
-function fibbonaccis(num) {
-  let fArray = [];
-  let currentNum = 1;
-  while (counter <= num) {
-    fArray.push(currentNum)
-  }
-
+function fibonaccis(num) {
+  // create initial fibonacci array with first two numbers
+  let numArray = [1, 1];
+  // create condition for determining next number in sequence
+  let nextNum = numArray[numArray.length -1] + numArray[numArray.length - 2]; 
+  for (let idx = 0; idx < numArray.length; idx += 1)
 
   }
 }
 
+console.log(fibonaccis(10));
 
-findFibonacciIndexByLength(2);       // 7
-findFibonacciIndexByLength(10);      // 45
-findFibonacciIndexByLength(16);      // 74
+
+
+// findFibonacciIndexByLength(2);       // 7
+// findFibonacciIndexByLength(10);      // 45
+// findFibonacciIndexByLength(16);      // 74
 
 // Don't try any higher values until you read the solution Discussion
