@@ -9,14 +9,11 @@
 // input: number representing minutes until midnight
 // output: string representing time of day (hh:mm) format
 
-function timeOfDay(num) {
-  let minutesInDay = 1440;
-  
-}
 
 
-console.log(timeOfDay(0) === "00:00");
-console.log(timeOfDay(-3) === "23:57");
+
+//console.log(timeOfDay(0) === "00:00");
+//console.log(timeOfDay(-3) === "23:57");
 console.log(timeOfDay(35) === "00:35");
 console.log(timeOfDay(-1437) === "00:03");
 console.log(timeOfDay(3000) === "02:00");

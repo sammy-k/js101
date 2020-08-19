@@ -22,12 +22,18 @@ const digits = {
 };
 
 function stringToInteger(str) {
-  
+  let number = 0;
+  for (let idx = 0; idx < str.length; idx += 1) {
+    let currentChar = str[idx];
+    currentChar = digits[currentChar];
+    number.push(currentChar);
+  }
+  return number.join;
 }
 
 
 
 // console.log(stringToInteger("4321") === 4321); // logs true
 // console.log(stringToInteger("570") === 570); // logs true
-// console.log(stringToInteger("4321")); // 4321
+console.log(stringToInteger("4321")); // 4321
 // console.log(stringToInteger("570")); // 570
