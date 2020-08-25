@@ -1,22 +1,14 @@
+
+// constant declaration
 const readline = require('readline-sync');
 const VALID_CHOICES = ['rock', 'paper', 'scissors'];
 
+// function declaration
 function prompt(message) {
-  console.log(`==> ${message}`);
+  console.log(`=> ${message}`);
 }
 
-while (true) {
-  prompt(`Choose one: ${VALID_CHOICES.join(', ')}`);
-  let choice = readline.question();
-
-  while (!VALID_CHOICES.includes(choice)) {
-    prompt("That's not a valid choice");
-    choice = readline.question();
-  }
-
-  let randomIndex = Math.floor(Math.random() * VALID_CHOICES.length);
-  let computerChoice = VALID_CHOICES[randomIndex];
-
+function displayWinner(choice, computerChoice) {
   prompt(`You chose ${choice}, computer chose ${computerChoice}`);
 
   if ((choice === 'rock' && computerChoice === 'scissors') ||
@@ -24,12 +16,26 @@ while (true) {
       (choice === 'scissors' && computerChoice === 'paper')) {
     prompt('You win!');
   } else if ((choice === 'rock' && computerChoice === 'paper') ||
-  (choice === 'paper' && computerChoice === 'scissors') ||
-  (choice === 'scissors' && computerChoice === 'rock')) {
+            (choice === 'paper' && computerChoice === 'scissors') ||
+            (choice === 'scissors' && computerChoice === 'rock')) {
     prompt('Computer wins!');
   } else {
     prompt("It's a tie");
   }
+}
+
+// start program
+while (true) {
+  let choice = readline.question(prompt(`Choose one: ${VALID_CHOICES.join(', ')}`));
+
+  while (!VALID_CHOICES.includes(choice)) {
+    choice = readline.question(prompt("That's not a valid choice"));
+  }
+
+  let randomIndex = Math.floor(Math.random() * VALID_CHOICES.length);
+  let computerChoice = VALID_CHOICES[randomIndex];
+
+  displayWinner(choice, computerChoice);
 
   prompt('Do you want to play again (y/n)?');
   let answer = readline.question().toLowerCase();
@@ -39,5 +45,6 @@ while (true) {
   }
 
   if (answer[0] !== 'y') break;
+
 }
 

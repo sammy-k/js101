@@ -6,6 +6,7 @@
     "invalidNumber": "Hmm... that doesn't look like a valid number.",
     "operation": "What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide",
     "invalidOperation": "Must choose 1, 2, 3 or 4",
+    "invalidDivision": "You cannot divide a number by 0, please choose another method",
     "keepUsing": "Would you like to keep using the calculator? (y/n)",
     "invalidResponse": "Please enter 'y' or 'n'."
   },
@@ -16,6 +17,7 @@
     "invalidNumber": "Hmm ... eso no parece un número válido.",
     "operation": "¿Qué operación te gustaría realizar?\n1) Sumar 2) Restar 3) Multiplicar 4) Dividir",
     "invalidOperation": "Debe elegir 1, 2, 3 or 4",
+    "invalidDivision": "No puede dividir un número por 0, elija otro método",
     "keepUsing": "¿Te gustaría seguir usando la calculadora? (si (y) o no (n))",
     "invalidResponse": "Por favor escribe 'y' or 'n'."
   },
@@ -26,6 +28,7 @@
     "invalidNumber": "Hmm ... qui ne ressemble pas à un nombre valide.",
     "operation": "Quelle opération souhaitez-vous effectuer?\n1) Ajouter 2) Soustraire 3) Multiplier 4) Diviser",
     "invalidOperation": "Doit choisir 1, 2, 3 ou 4",
+    "invalidDivision": "Vous ne pouvez pas diviser un nombre par 0, veuillez choisir une autre méthode",
     "keepUsing": "Souhaitez-vous continuer à utiliser la calculatrice? (oui (y) ou non (n))",
     "invalidResponse": "Entrez s'il vous plait 'y' or 'n'."
   }

@@ -8,15 +8,15 @@
 // non-alphabetic characters must reamin unchanged
 
 function swapCase(str) {
-  let swapStr = '';
+  let result = '';
   str.split('').forEach((char) => {
-    if (char === char.toLowerCase()) {
-      swapStr += char.toUpperCase();
-    } else if (char === char.toUpperCase()) {
-      swapStr += char.toLowerCase();
+    if (char.toLowerCase() === char) {
+      result += char.toUpperCase();
+    } else if (char.toUpperCase() === char) {
+      result += char.toLowerCase();
     }
   });
-  return swapStr;
+  return result;
 }
 
 

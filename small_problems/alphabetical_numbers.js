@@ -39,6 +39,7 @@ let numWords = {
 
 
 function alphabeticNumberSort(arr) {
+  let result = [];
   for (let idx = 0; idx < arr.length; idx += 1) {
     let currentNum = arr[idx];
     console.log(numWords[currentNum]);

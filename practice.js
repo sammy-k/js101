@@ -5,3 +5,4 @@ console.log(obj);
 
 // Expected output:
 // { title: 'Duke', name: 'Nukem', age: 33 }
+
