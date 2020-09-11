@@ -1,22 +1,13 @@
 // COMPLETED - NO FURTHER REVIEW NEEDED
 
-// OPTION 1
-// function logOdds() {
-//   for (let i = 1; i <= 99; i++) {
-//     if (i % 2 !== 0) {
-//       console.log(i);
-//     }
-//   }
+/// solution 1: using a while loop
+// let num = 1;
+// while (num <= 99) {
+//   console.log(num);
+//   num += 2;
 // }
 
-// FURTHER EXPLORATION
-// OPTION 2 (include number limiter)
-function logOdds(num) {
-  let idx = 1;
-  while (idx <= num) {
-    console.log(idx);
-    idx += 2;
-  }
+// solution 2: using a for loop
+for (let num = 1; num <= 99; num += 2) {
+  console.log(num);
 }
-
-console.log(logOdds(40));
